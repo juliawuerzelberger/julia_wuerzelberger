@@ -2,14 +2,16 @@
 public class Product
 {
 	private String name = "Coca Cola";
-	private boolean onStock;
+	private float price = 10;
+	private int id;
 	
 	// --------------Konstruktor----------------------
 	
-	public Product(String name)
+
+	public Product(String name, float price)
 	{
 		setName(name);
-		isOnStock(true);
+		setPrice(price);
 	}
 
 	// ----------------getter & setter------------------
@@ -19,19 +21,28 @@ public class Product
 		return name;
 	}
 
-	public boolean getOnStock()
-	{
-		return onStock
-	}
-
 	public void setName(String name)
 	{
 		this.name = name;
 	}
-
-	public void isOnStock(boolean onStock)
+	
+	public float getPrice()
 	{
-		this.onStock = onStock;
+		return price;
 	}
+
+	public void setPrice(float price)
+	{
+		this.price = price;
 }
 
+	public int getId()
+	{
+		return id;
+	}
+
+	public void setId(int id)
+	{
+		this.id = id;
+	}
+}
